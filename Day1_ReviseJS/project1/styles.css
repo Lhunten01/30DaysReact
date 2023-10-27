@@ -1,0 +1,7 @@
+.text {
+    display: none;
+}
+
+.text.show_hidden {
+    display: block;
+}

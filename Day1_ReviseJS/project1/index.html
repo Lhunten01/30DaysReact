@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inline/external JS</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+
+<body>
+    <h1>Practice the internal and external JS</h1>
+    <button class="btn">Click me</button>
+    <p class="text show_hidden">This is the secret</p>
+
+
+    <script>
+        const x = document.querySelector(".text"); // Use querySelector for a single element
+        document.querySelector(".btn").addEventListener("click", () => {
+            if (x.classList.contains("show_hidden")) {
+                x.classList.remove("show_hidden")
+            } else {
+                x.classList.add("show_hidden")
+            }
+        });
+    </script>
+
+    <!-- or
+    <script src="./script.js">
+    </script> -->
+</body>
+
+</html>
