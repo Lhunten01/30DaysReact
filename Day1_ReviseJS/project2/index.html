@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic JS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form action="submit" id="keyValueForm">
+        <label for="key">KEY</label>
+        <input id="key" type="text">
+        <label for="value">VALUE</label>
+        <input id="val" type="text">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="fruit"></p>
+    <script>
+        const fruits = new Map()
+        const txt = ""
+        fruits.forEach((key, value) => {
+            txt += key + "="
+            value + "<br>";
+        })
+
+        function display() {
+            console.log("hiii");
+            const txt = "";
+            for (const x in fruits.entries()) {
+                console.log(x);
+                txt += x + "<br>";
+            }
+            document.getElementById("fruit").innerText = txt;
+        }
+        document.getElementById("keyValueForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+            const key = document.getElementById("key").value;
+            const val = document.getElementById("val").value;
+            display()
+            console.log(fruits.set(key, val));
+        })
+    </script>
+</body>
+
+</html>
