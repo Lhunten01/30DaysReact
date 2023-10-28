@@ -13,33 +13,10 @@
     </form>
     <button id="addmore">ADDMORE</button>
     <button id="btn">Submit</button>
-    <script src="./script.js">
-        const arr = Array();
-        arr[0] =
-            document.getElementById("addmore").addEventListener("click", (e) => {
-                e.preventDefault();
-                const form = document.getElementById("takeArr");
-                const inputcount = form.getElementsByTagName("input").length;
-                const newinput = document.createElement("input");
-                newinput.id = "input" + (inputcount + 1);
-                newinput.name = "input" + (inputcount + 1);
-                form.appendChild(newinput)
-            });
-        document.getElementById("btn").addEventListener("click", (e) => {
-            const inputs = document.getElementsByTagName("input");
-            for (const input of inputs) {
-                if (input.value.trim() !== '') {
-                    arr.push(input.value);
-                }
-            }
-            console.log(arr);
-        });
-
-        //creating array using the split
-        const input1 = "i am hero"
-        console.log(input1)
-        const splitedInput1 = input1.split(" ");
-        console.log(splitedInput1);
+    <script type="module" src="./script.js">
+        const arr = Array(); arr[0] = document.getElementById("addmore").addEventListener("click", (e) => { e.preventDefault(); const form = document.getElementById("takeArr"); const inputcount = form.getElementsByTagName("input").length; const newinput = document.createElement("input");
+        newinput.id = "input" + (inputcount + 1); newinput.name = "input" + (inputcount + 1); form.appendChild(newinput) }); document.getElementById("btn").addEventListener("click", (e) => { const inputs = document.getElementsByTagName("input"); for (const
+        input of inputs) { if (input.value.trim() !== '') { arr.push(input.value); } } console.log(arr); }); //creating array using the split const input1 = "i am hero" console.log(input1) const splitedInput1 = input1.split(" "); console.log(splitedInput1);
     </script>
     <br>
     <h4>Learing</h4>
